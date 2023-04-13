@@ -1,0 +1,63 @@
+.card {
+    
+    color: #FFF;
+    
+
+    &.card--orange {
+        background-color: #E28625;
+
+        .card-link{
+            color: #E28625;
+        }
+            
+    }
+
+    &.card--blue {
+        background-color: #006971;
+
+        .card-link{
+            color: #006971;
+        }
+    }
+  
+    &.card--green {
+        background-color: #004140;
+
+        .card-link{
+            color: #004140;
+        }
+    }
+
+    &-title{
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+    }
+    &-information{
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+    }
+    &-link{
+        display: inline-block;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        background-color: #FFF;
+        border: 2px solid transparent;
+        border-radius: 25px;
+        transition: ease-in-out .4s;
+        text-decoration: none;
+        padding: 10px 32px;
+
+        &:hover{
+            color: #FFF !important;
+            background-color: transparent;
+            border: 2px solid #FFFFFF;
+        }
+    }
+}
+
+    
