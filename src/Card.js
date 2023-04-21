@@ -5,16 +5,19 @@ import React from 'react';
 function Content(props) {
   const cardStyle = classnames({
     "card": true,
-    "card--orange": props.color === "orange",
-    "card--blue": props.color === "blue",
-    "card--green": props.color === "green"
+    "card--sedan": props.type === "sedan",
+    "card--suv": props.type === "suv",
+    "card--luxury": props.type === "luxury"
   });
+
+  let car = props.car;
+  let carText = props.carText;
 
   return (
     <div className={cardStyle}>
       <div className='card-icon'></div>
-      <span className='card-title'>Sedans</span>
-      <p className='cart-information'>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</p>
+      <p className='card-title'>{car}</p>
+      <p className='card-information'>{carText}</p>
       <a className='card-link' href='#'>Learn More</a>
     </div>
   );
@@ -23,9 +26,21 @@ function Content(props) {
 export default function Card() {
   return (
     <div className='content'>
-      <Content color='orange' />
-      <Content color='blue' />
-      <Content color='green' />
+      <Content 
+        type='sedan'
+        car='Sedan'
+        carText='Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.' 
+      />
+      <Content 
+        type='suv'
+        car='Suv'
+        carText='Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.' 
+      />
+      <Content 
+        type='luxury' 
+        car='Luxury'
+        carText='Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.' 
+      />
     </div>
   );
 }
