@@ -1,29 +1,9 @@
 import './App.css';
-import classnames from 'classnames';
 import React from 'react';
+import Content from './Content'
 
-function Content(props) {
-  const cardStyle = classnames({
-    "card": true,
-    "card--sedan": props.type === "sedan",
-    "card--suv": props.type === "suv",
-    "card--luxury": props.type === "luxury"
-  });
 
-  let car = props.car;
-  let carText = props.carText;
-
-  return (
-    <div className={cardStyle}>
-      <div className='card-icon'></div>
-      <p className='card-title'>{car}</p>
-      <p className='card-information'>{carText}</p>
-      <a className='card-link' href='#'>Learn More</a>
-    </div>
-  );
-}
-
-export default function Card() {
+function Card() {
   return (
     <div className='content'>
       <Content 
@@ -44,3 +24,5 @@ export default function Card() {
     </div>
   );
 }
+
+export default Card;
